@@ -1,46 +1,54 @@
-# 🚀 PacketInsight – Deep Packet Inspection Tool
+# ⚖️ LawSaral – Legal Awareness Platform
 
-A C++ based network packet analyzer using **Deep Packet Inspection (DPI)** to capture, parse, and analyze PCAP traffic across multiple protocols like HTTP, DNS, and TLS.
+A modern web-based platform built with **React, Tailwind CSS, and Supabase** to simplify legal awareness by providing structured, easy-to-understand legal information for users.
 
 ---
 
 ## 📌 Overview
 
-PacketInsight is designed to inspect network packets at a deeper level by analyzing both headers and payload data. It helps in understanding network behavior, protocol communication, and extracting meaningful insights from raw network traffic.
+LawSaral aims to bridge the gap between complex legal systems and everyday users by presenting legal content in a simplified and accessible format.
+The platform focuses on usability, clarity, and scalability for future AI-driven legal assistance.
 
 ---
 
 ## ⚡ Features
 
-* 🔍 Deep Packet Inspection (DPI)
-* 📡 Protocol parsing (HTTP, DNS, TLS)
-* 📦 Header & payload analysis
-* 🔗 Connection-level traffic insights
-* 🧪 PCAP-based testing and simulation
-* ⚙️ Modular and extensible architecture
+* 📚 Structured legal information
+* 🔍 Easy navigation and content discovery
+* ⚡ Fast and responsive UI
+* 🔐 Secure backend integration with Supabase
+* 🎨 Modern UI using Tailwind CSS & ShadCN
+* 🧠 Scalable architecture for future AI integration
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Language:** C++
-* **Libraries:** PCAP (libpcap / Npcap)
-* **Build Tool:** CMake
+* **Frontend:** React.js (Vite)
+* **Styling:** Tailwind CSS, ShadCN UI
+* **Backend:** Supabase
+* **State Management:** React Query
+* **Routing:** React Router DOM
 
 ---
 
 ## 📂 Project Structure
 
 ```
-PacketInsight/
-│── include/              
-│── src/                  
-│── dpi_engine/           
-│── generate_test_pcap.py 
-│── test_dpi.pcap         
-│── output.pcap           
-│── CMakeLists.txt        
-│── README.md             
+LawSaral/
+│── public/              
+│── src/
+│   ├── components/      # Reusable UI components
+│   ├── pages/           # Application pages
+│   ├── hooks/           # Custom hooks
+│   ├── lib/             # Utility functions
+│   ├── data/            # Static data
+│   ├── integrations/    # Supabase & external integrations
+│── supabase/            
+│── index.html           
+│── package.json         
+│── vite.config.js       
+│── README.md            
 ```
 
 ---
@@ -49,22 +57,19 @@ PacketInsight/
 
 ### 🔹 Prerequisites
 
-* C++ Compiler (GCC / MSVC)
-* CMake
-* PCAP Library (libpcap / Npcap)
+* Node.js (v16+ recommended)
+* npm or bun
 
 ---
 
-### 🔹 Build Instructions
+### 🔹 Setup Instructions
 
 ```bash
-git clone https://github.com/rajveer-verma/PacketInsight.git
-cd PacketInsight
+git clone https://github.com/rajveer-verma/LawSaral.git
+cd LawSaral
 
-mkdir build
-cd build
-cmake ..
-make
+npm install
+npm run dev
 ```
 
 ---
@@ -72,24 +77,28 @@ make
 ### 🔹 Run
 
 ```bash
-./packet_analyzer
+http://localhost:8080
 ```
 
 ---
 
-## 🧪 Testing
+## 🔐 Environment Variables
 
-* Use `generate_test_pcap.py` to create sample traffic
-* Analyze using `test_dpi.pcap`
-* Validate output via `output.pcap`
+Create a `.env` file in the root directory:
+
+```bash
+VITE_SUPABASE_URL=your_url
+VITE_SUPABASE_ANON_KEY=your_key
+```
 
 ---
 
 ## 🚀 Future Improvements
 
-* Real-time packet capture support
-* GUI-based visualization dashboard
-* Advanced protocol detection
-* Performance optimization for large-scale traffic
+* 🤖 AI-based legal assistant
+* 📊 Personalized user dashboard
+* 🌍 Multi-language support
+* 📝 Case tracking system
+* 📱 Mobile-first enhancements
 
 ---
