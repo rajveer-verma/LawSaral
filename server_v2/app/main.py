@@ -46,7 +46,7 @@ def root():
     }
 
 
-@app.api_route("/health", methods=["GET", "HEAD"])
+@app.get("/health")
 def health():
     database_connected = True
     qdrant_connected = True
@@ -74,3 +74,8 @@ def health():
             else "disconnected"
         ),
     }
+
+
+@app.head("/health")
+def health_head():
+    return
